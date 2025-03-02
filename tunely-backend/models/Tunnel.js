@@ -1,7 +1,20 @@
 const mongoose = require('mongoose');
-const TunnelSchema = new mongoose.Schema({
-  token: String,
-  subdomain: String,
-  createdAt: { type: Date, default: Date.now },
+
+const tunnelSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
+  subdomain: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
-module.exports = mongoose.model('Tunnel', TunnelSchema);
+
+module.exports = mongoose.model('Tunnel', tunnelSchema);
