@@ -1,14 +1,24 @@
 {
   "name": "tunely",
   "version": "1.0.0",
-  "bin": "./index.js",
+  "description": "Tunely CLI - Expose your local server to the internet",
+  "bin": {
+    "tunely": "./bin/tunely.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "prepublishOnly": "echo 'Ensure frpc binaries are included before publishing'"
+  },
   "dependencies": {
     "commander": "^9.0.0",
     "axios": "^1.0.0",
     "ini": "^3.0.0",
-    "child_process": "latest"
+    "child_process": "latest",
+    "fs-extra": "^11.1.0"
   },
-  "scripts": {
-    "postinstall": "echo 'Please download frpc from https://github.com/fatedier/frp/releases and place it in this directory as frpc'"
-  }
+  "author": "Your Name",
+  "license": "MIT",
+  "homepage": "https://tunely.snapstay.in",
+  "keywords": ["tunneling", "cli", "local-server"]
 }
