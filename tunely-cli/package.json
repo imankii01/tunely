@@ -1,0 +1,14 @@
+{
+  "name": "tunely",
+  "version": "1.0.0",
+  "bin": "./index.js",
+  "dependencies": {
+    "commander": "^9.0.0",
+    "axios": "^1.0.0",
+    "ini": "^3.0.0",
+    "child_process": "latest"
+  },
+  "scripts": {
+    "postinstall": "echo 'Please download frpc from https://github.com/fatedier/frp/releases and place it in this directory as frpc'"
+  }
+}
